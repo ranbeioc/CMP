@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TINA IP CMS v1.0</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col menu_fixed">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-address-card-o"></i> <span>天籁版权管理</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>你好,</span>
+                <h2>管理员</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>菜单项</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bar-chart"></i> 概况 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">概况汇总</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-database"></i> 数据查询 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables_dynamic.html">基础数据</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-copyright"></i> 版权管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables_input.html"> 版权录入 </a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-files-o"></i> 审批管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="projects.html">用户注册审批</a></li>
+                      <li><a href="projects2.html">申请单审批</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-cny"></i> 费用结算 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="projects3.html">申请结算</a></li>
+                      <li><a href="#.html">合同管理</a></li>
+                      <li><a href="#.html">发票管理</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-users"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="profile.html">个人信息</a></li>
+                      <li><a href="contacts.html">权利人管理</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-list"></i> 日志查询 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="logs.html"> 操作日志 </a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <!--div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div-->
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">管理员
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="profile.html"> 个人信息</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#exampleModalHP">
+                    <span class="badge bg-red pull-right">2</span>
+                    <span>帮助</span>
+                    </a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 退出</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-red">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">3 分钟前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">10 小时前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">2 天前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">2016-10-20</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a href="projects2.html">
+                          <strong>查看全部消息</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            
+            <div class="clearfix"></div>
+
+                    <div class="row">
+                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-credit-card"></i>
+                          </div>
+                          <div class="count">5</div>
+
+                          <h3>待处理申请</h3>
+                          <p>所有注册申请用户</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-close"></i>
+                          </div>
+                          <div class="count">2</div>
+
+                          <h3>未通过申请</h3>
+                          <p>所有注册申请用户</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-check-square-o"></i>
+                          </div>
+                          <div class="count">12</div>
+                          <h3>已通过申请</h3>
+                          <p>所有注册申请用户</p>
+                        </div>
+                      </div>
+                    </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>结算申请单审批</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <!-- start project list -->
+                    <table class="table table-striped projects">
+                      <thead>
+                        <tr>
+                          <th>申请单号</th>
+                          <th>结算申请人</th>
+                          <th>结算周期</th>
+                          <th>结算金额</th>
+                          <th>提交时间</th>
+                          <th>申请状态</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>132434</td>
+                          <td>权利人名称</td>
+                          <td>2016年11月1日-2016年11月30日</td>
+                          <td>￥2334.50</td>
+                          <td>2017-1-5 16:26:31</td>
+                          <td>
+                            <span class="label label-warning">待审批</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                            <div>
+                              <a href="invoice.html" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 查看</a>
+                              <a href="#" class="btn btn-success btn-xs"><i class="fa fa-check"></i> 通过 </a>
+                              <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal2"><i class="fa fa-close"></i> 拒绝 </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>132434</td>
+                          <td>权利人名称</td>
+                          <td>2016年11月1日-2016年11月30日</td>
+                          <td>￥2334.50</td>
+                          <td>2017-1-5 16:26:31</td>
+                          <td>
+                            <span class="label label-warning">财务处理中</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                            <div>
+                              <a href="invoice.html" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 查看</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>232434</td>
+                          <td>权利人名称</td>
+                          <td>2016年10月1日-2016年10月31日</td>
+                          <td>￥2334.50</td>
+                          <td>2016-11-5 16:26:31</td>
+                          <td>
+                            <span class="label label-success">成功</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                            <div>
+                              <a href="invoice.html" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 查看</a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>332434</td>
+                          <td>权利人名称</td>
+                          <td>2016年9月1日-2016年9月30日</td>
+                          <td>￥2334.50</td>
+                          <td>2016-10-5 16:26:31</td>
+                          <td>
+                            <span class="label label-default">已取消</span>
+                          </td>
+                          <td class="vertical-align-mid">
+                            <div>
+                              <a href="invoice.html" class="btn btn-info btn-xs"><i class="fa fa-eye"></i> 查看</a>
+                            </div>
+                          </td>
+                        </tr>
+
+
+
+
+
+                      </tbody>
+                    </table>
+                    <!-- end project list -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+        <p>您确认要拒绝该结算申请单吗？&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="exampleModalHP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="margin: 80px auto; padding: 0;">
+  <div class="modal-dialog modal-lg" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">帮助</h4>
+      </div>
+      <div class="modal-body" style="padding: 0;">
+        
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/1.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>智者 源自于独立思考</h3>
+        <p>世人皆知美之为美</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/2.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>完美 立足于坚韧不拔</h3>
+        <p>天地有大美而不言</p>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+</div>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            TINA IP-CMS v1.0 by <a href="https://tlkg.com.cn">AngleVoice</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+  </body>
+</html>

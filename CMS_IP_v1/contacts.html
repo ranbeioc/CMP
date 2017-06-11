@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TINA IP CMS v1.0</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-address-card-o"></i> <span>天籁版权管理</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+             <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>你好,</span>
+                <h2>管理员</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>菜单项</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bar-chart"></i> 概况 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">概况汇总</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-database"></i> 数据查询 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables_dynamic.html">基础数据</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-copyright"></i> 版权管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables_input.html"> 版权录入 </a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-files-o"></i> 审批管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="projects.html">用户注册审批</a></li>
+                      <li><a href="projects2.html">申请单审批</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-cny"></i> 费用结算 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="projects3.html">申请结算</a></li>
+                      <li><a href="#.html">合同管理</a></li>
+                      <li><a href="#.html">发票管理</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-users"></i> 用户管理 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="profile.html">个人信息</a></li>
+                      <li><a href="contacts.html">权利人管理</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-list"></i> 日志查询 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="logs.html"> 操作日志 </a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <!--div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div-->
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">管理员
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="profile.html"> 个人信息</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#exampleModalHP">
+                    <span class="badge bg-red pull-right">2</span>
+                    <span>帮助</span>
+                    </a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> 退出</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-red">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">3 分钟前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">10 小时前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">2 天前</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>版权人A</span>
+                          <span class="time">2016-10-20</span>
+                        </span>
+                        <span class="message">
+                          提交了版权结算申请
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a href="projects2.html">
+                          <strong>查看全部消息</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>人员管理</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="输入名称查询...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                  <div class="x_content">
+                    <div class="row">
+                      <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <ul class="pagination pagination-split">
+                          <li class="active"><a href="#" style="color: #fff;">添加用户</a></li>
+                          <li><a href="#">全部角色</a></li>
+                          <li><a href="#">管理员</a></li>
+                          <li><a href="#">版权组</a></li>
+                          <li><a href="#">曲库组</a></li>
+                          <li><a href="#">财务组</a></li>
+                          <li><a href="#">权利人</a></li>
+                          <li><a href="#">权利公司/组织</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="clearfix"></div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>管理员</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>人员姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>版权组</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>人员姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>曲库组</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>人员姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>财务组</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>人员姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                               <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>权利公司/组织</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>权利公司联系人姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>权利人</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>权利人姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>权利人</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>权利人姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                                 <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>权利人</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>权利人姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                              <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
+                        <div class="well profile_view">
+                          <div class="col-sm-12">
+                            <h4 class="brief"><i>权利人</i></h4>
+                            <div class="left col-xs-7">
+                              <h2>权利人姓名</h2>
+                              <br>
+                              <ul class="list-unstyled">
+                                <li><i class="fa fa-building"></i> 电邮: demos@fuckyou.com</li>
+                                <li><i class="fa fa-phone"></i> 电话：1353465466 </li>
+                                <li><i class="fa fa-map-marker user-profile-icon"></i> 所属机构名称示例</li>
+                              </ul>
+                            </div>
+                            <div class="right col-xs-5 text-center">
+                              <img src="images/user.png" alt="" class="img-circle img-responsive">
+                            </div>
+                          </div>
+                          <div class="col-xs-12 bottom text-center">
+                            <div class="col-xs-12 col-sm-3 emphasis">
+                              
+                            </div>
+                            <div class="col-xs-12 col-sm-9 emphasis">
+                           
+                               <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#exampleModal2"> 重置密码 </button>
+                              <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#exampleModal3"> 禁用账户 </button>
+                               <a href="profile.html" class="btn btn-primary btn-xs">
+                                <i class="fa fa-user"> </i> 个人信息
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    <div class="row">
+                    <nav aria-label="...">
+                      <ul class="pager">
+                           <li>
+                            <a href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="active"><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li>
+                            <a href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                      </ul>
+                    </nav>
+                    </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+        <p>您确认要重置该用户的密码吗？&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+        <p>您确认要禁用该用户的账户吗？&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="exampleModalHP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="margin: 80px auto; padding: 0;">
+  <div class="modal-dialog modal-lg" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">帮助</h4>
+      </div>
+      <div class="modal-body" style="padding: 0;">
+        
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/1.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>智者 源自于独立思考</h3>
+        <p>世人皆知美之为美</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/2.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>完美 立足于坚韧不拔</h3>
+        <p>天地有大美而不言</p>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+</div>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            TINA IP-CMS v1.0 by <a href="https://tlkg.com.cn">AngleVoice</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+  </body>
+</html>
